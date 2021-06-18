@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Eight Queens</title>
+	<script>
+		window.onload = function (){
+      document.getElementById("message").innerHTML = "Let's place the eight queens";
+    };
+	</script>
+</head>
+<body>
+	<h1>Eight Queens</h1>
+	<div id="message"></div>
+	<table id="chessboard" cellspacing="1" cellpadding="0">
+		<tbody id="tbody">
+		  <script>
+			let html = ''
+			let cellNumCount = 0;
+			for (i = 0; i < 8; i++){
+			  html = html + '<tr>' + "\n";
+			  for (j = 0; j < 8; j++) {
+				let id = 'cell' + new String(cellNumCount);
+				html = html + '<td id="' + id + '"></td>' + "\n";
+				cellNumCount++;
+			  }
+			  html = html + '</tr>' + "\n";
+			}
+			document.getElementById("tbody").innerHTML = html;
+		  </script>
+		</tbody>
+	</table>
+	<a href="#" class="cp_btn">reset</a>
+</body>
+</html>
