@@ -16,27 +16,39 @@ h1 {
 #chessboard {
 	margin: 0 auto 0 auto;
 	margin-bottom: 8px;
-	padding: 0; 
-	background: #000033; 
+	padding: 0;
+	background: #000033;
 	font-size: 22px;
-  }
-  
-  tr {
-	padding: 0; 
+}
+
+tr {
+	padding: 0;
 	margin: 0;
-  }
-  
-  td {
-	color: #000000; 
-	background: #ffffff; 
-	padding: 0; 
-	margin: 0; 
-	width: 35px; 
-	height: 35px; 
-	text-align: center; 
+}
+
+td.tdLight {
+	color: #000000;
+	background: #f5deb3;
+	padding: 0;
+	margin: 0;
+	width: 35px;
+	height: 35px;
+	text-align: center;
 	vertical-align: middle;
 	caret-color: #cccccc;
-  }
+}
+
+td.tdThick {
+	color: #000000;
+	background: #cd853f;
+	padding: 0;
+	margin: 0;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	vertical-align: middle;
+	caret-color: #cccccc;
+}
 
 a.cp_btn {
 	display: block;

@@ -18,15 +18,24 @@
 		  <script>
 			let html = ''
 			let cellNumCount = 0;
+			let odd_line = true;
 			for (i = 0; i < 8; i++){
 			  html = html + '<tr>' + "\n";
 			  for (j = 0; j < 8; j++) {
 				let id = 'cell' + new String(cellNumCount);
-				html = html + '<td id="' + id + '"></td>' + "\n";
+				html = html + '<td id="' + id + '"';
+				if ((odd_line && cellNumCount % 2 == 0) || (!odd_line && cellNumCount % 2 == 1)){
+					html = html + ' class="tdThick"></td>' + "\n";
+				}
+				else {
+					html = html + ' class="tdLight"></td>' + "\n";
+				}
 				cellNumCount++;
 			  }
 			  html = html + '</tr>' + "\n";
+			  odd_line = !odd_line;
 			}
+			console.log(html);
 			document.getElementById("tbody").innerHTML = html;
 		  </script>
 		</tbody>
