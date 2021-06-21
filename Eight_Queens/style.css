@@ -13,7 +13,7 @@ h1 {
 	font-size: x-large;
 }
 
-#chessboard {
+table{
 	margin: 0 auto 0 auto;
 	margin-bottom: 8px;
 	padding: 0;
@@ -46,6 +46,18 @@ td.tdThick {
 	width: 35px;
 	height: 35px;
 	text-align: center;
+	vertical-align: middle;
+	caret-color: #cccccc;
+}
+
+td.queens {
+	color: #000000; 
+	background: #ffffff; 
+	padding: 0; 
+	margin: 0; 
+	width: 35px; 
+	height: 35px; 
+	text-align: center; 
 	vertical-align: middle;
 	caret-color: #cccccc;
 }

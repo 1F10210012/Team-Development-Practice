@@ -1,45 +1,64 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
+
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Eight Queens</title>
 	<script>
-		window.onload = function (){
-      document.getElementById("message").innerHTML = "Let's place the eight queens";
-    };
+		window.onload = function () {
+			document.getElementById("message").innerhtml = "Let's place the eight queens";
+		};
 	</script>
 </head>
+
 <body>
 	<h1>Eight Queens</h1>
-	<div id="message"></div>
-	<table id="chessboard" cellspacing="1" cellpadding="0">
-		<tbody id="tbody">
-		  <script>
-			let html = ''
-			let cellNumCount = 0;
-			let odd_line = true;
-			for (i = 0; i < 8; i++){
-			  html = html + '<tr>' + "\n";
-			  for (j = 0; j < 8; j++) {
-				let id = 'cell' + new String(cellNumCount);
-				html = html + '<td id="' + id + '"';
-				if ((odd_line && cellNumCount % 2 == 0) || (!odd_line && cellNumCount % 2 == 1)){
-					html = html + ' class="tdThick"></td>' + "\n";
+	<div id="message">Let's place the queens</div>
+	<table cellspacing="1" cellpadding="0">
+		<tbody id="tbody-1">
+			<script>
+				let cb_html = ''
+				let cb_cellCount = 0;
+				let odd_line = true;
+				for (i = 0; i < 8; i++) {
+					cb_html += '<tr>' + "\n";
+					for (j = 0; j < 8; j++) {
+						let id = 'chessboardCell' + new String(cb_cellCount);
+						cb_html += '<td id="' + id + '"';
+						if ((odd_line && cb_cellCount % 2 == 0) || (!odd_line && cb_cellCount % 2 == 1)) {
+							cb_html += ' class="tdThick"></td>' + "\n";
+						} else {
+							cb_html += ' class="tdLight"></td>' + "\n";
+						}
+						cb_cellCount++;
+					}
+					cb_html += '</tr>' + "\n";
+					odd_line = !odd_line;
 				}
-				else {
-					html = html + ' class="tdLight"></td>' + "\n";
+				console.log(cb_html);
+				document.getElementById("tbody-1").innerHTML = cb_html;
+			</script>
+		</tbody>
+	</table>
+	<table cellspacing="1" cellpadding="0">
+		<tbody id="tbody-2">
+			<script>
+				let q_html = '';
+				let q_cellCount = 0;
+				q_html += '<tr>' + "\n";
+				for (i = 0; i < 8; i++) {
+					let id = 'queensCell' + new String(q_cellCount);
+					q_html += '<td id="' + id + '" class="queens">♛</td>' + "\n";
+					q_cellCount++;
 				}
-				cellNumCount++;
-			  }
-			  html = html + '</tr>' + "\n";
-			  odd_line = !odd_line;
-			}
-			console.log(html);
-			document.getElementById("tbody").innerHTML = html;
-		  </script>
+				q_html += '</tr>' + "\n";
+				console.log(q_html);
+				document.getElementById("tbody-2").innerHTML = q_html;
+			</script>
 		</tbody>
 	</table>
 	<a href="#" class="cp_btn">reset</a>
 </body>
+
 </html>
