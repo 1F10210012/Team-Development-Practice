@@ -18,3 +18,9 @@ h2.title1 {
 body {
     background-color: #ccffff;
 }
+.btn {
+    background-color: #33ffff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
