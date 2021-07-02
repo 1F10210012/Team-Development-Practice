@@ -11,6 +11,11 @@ h1 {
 	justify-content: center;
 }
 
+.content{
+	text-align: center;
+	margin-top: 30px;
+}
+
 #typing-demo1 {
 	width: 11ch;
 	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
@@ -52,4 +57,5 @@ body {
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
+	margin-bottom: 100px;
 }
