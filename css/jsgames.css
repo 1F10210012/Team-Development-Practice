@@ -3,16 +3,27 @@ h1 {
     font-size: 50px;
 }
 
-@-webkit-keyframes typing { from { width: 0; } }
-h2.title1 {
-    text-align: center;
-    width: 16.5em; 
-	width: 15ch;
-	margin: 2em 1em;
+.wrapper {
+	height: 0vh;
+	/*This part is important for centering*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.typing-demo {
+	width: 11ch;
+	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
 	white-space: nowrap;
 	overflow: hidden;
-	-webkit-animation: typing 5s steps(83, end),
-	           blink-caret .5s step-end infinite alternate;
+	font-family: monospace;
+	font-size: 1.5em;
+}
+
+@keyframes typing {
+	from {
+		width: 0
+	}
 }
 
 body {
