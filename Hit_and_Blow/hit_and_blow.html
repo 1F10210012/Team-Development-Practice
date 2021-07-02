@@ -3,9 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Hit_and_Blow</title>
+	<title>Hit and Blow</title>
+	<script>
+	</script>
 </head>
 <body>
-	<h1>Hit_and_Blow</h1>
+	<h1>Hit and Blow</h1>
+	<div id="message">Let's guess the colors</div>
+	<div class="HBcontainer" id="HBcontainer">
+		<script>
+			let html = '';
+			for(i = 0; i < 8; i++){
+				html += '<div class="verticalContents">\n';
+				html += '<div id="hit_' + new String(i) + '">H  </div>\n';
+				html += '<div id="blow_' + new String(i) + '">B  </div>\n';
+				for(j = 0; j < 4; j++){
+					html += '<button class="color" id="sc' + new String(i) + '-' + new String(j) + '"></button>\n';
+				}
+				html += '<button id="okButton' + new String(i) + '">ok</button>\n';
+				html += '</div>\n'
+			}
+			document.getElementById("HBcontainer").innerHTML = html;
+			console.log(html);
+		</script>
+		<div class="verticalContents">
+			<button class="color" id="answer0">?</button>
+			<button class="color" id="answer1">?</button>
+			<button class="color" id="answer2">?</button>
+			<button class="color" id="answer3">?</button>
+		</div>
+	</div>
+	<a href="#" class="cp_btn" onclick="onResetButtonClick()">reset</a>
 </body>
 </html>
